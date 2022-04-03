@@ -54,31 +54,23 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Opinions and reviews are a central part of all human activities and it’s the key influencers of our behaviors. This project focuses on the opinion
+mining of customers by classifying the polarity of reviews in terms of positive (good), negative (bad), and neutral. It is important to capture the public opinion on products and services to strengthen customer support. Manual labeling of each review by humans is time-consuming and error prompting.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+This project used python library's VADER sentiment to label the reviews to provide fast insight into product option trends.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Python library
 
+List of python's library used in the project,
 
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [VaderSentiment 3.3.2](https://pypi.org/project/vaderSentiment/)
+* [Pandas](https://pypi.org/project/pandas/)
+* [Sklearn](https://pypi.org/project/scikit-learn/)
+* [Seaborn](https://pypi.org/project/seaborn/)
+* [Matplotlib](https://matplotlib.org/)
+* [Numpy](https://pypi.org/project/numpy/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -92,40 +84,20 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+You are required to install vaderSentiment library before running jupyter notebook script.
+
+* vaderSentiment
   ```sh
-  npm install npm@latest -g
+  pip install vaderSentiment
   ```
 
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+VaderSentiment is both a qualitative and quantitative method that empirically validates the fold standard sentiment lexicon. It does not require any training data, supports emoticons, works in an adverse domain, and has a relatively good speed performance.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+The polarity score return by analyser.polarity_scores() reflect the sentiment of the text input, polarity score of > 0.05 is consider positive, < -0.05 is consider as negative and score between -0.05 to 0.05 is neutral sentiment.
+
+_For literature paper, please refer to the [Documentation](https://github.com/khawslee/case-study-comparative-study/blob/main/Sentiment%20Analysis%20Using%20Vader%20for%20Customer%20Review.pdf)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -165,5 +137,4 @@ Project Link: [https://github.com/khawslee/Sentiment-Analysis-Using-Vader](https
 [license-shield]: https://img.shields.io/github/license/khawslee/Sentiment-Analysis-Using-Vader.svg?style=for-the-badge
 [license-url]: https://github.com/khawslee/Sentiment-Analysis-Using-Vader/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://linkedin.com/in/khawslee
